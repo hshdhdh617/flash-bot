@@ -48,7 +48,10 @@ i18n.configure({
 /**
  * Client Events
  */
-client.user.setActivity(Type: ${PREFIX}help | ${client.guilds.cache.size} Server,Users ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)},, { type: "PLAYING"});
+client.on("ready", () => {
+  console.log(`${client.user.username} ready!`);
+  client.user.setActivity(`${PREFIX}help , ${client.guilds.cache.size} Server ,  {client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)} `, { type: "LISTENING" });
+
 });
 client.on("warn", (info) => console.log(info));
 client.on("error", console.error);
