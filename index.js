@@ -50,7 +50,7 @@ i18n.configure({
  */
 client.on("ready", () => {
   console.log(`${client.user.username} ready!`);
-  client.user.setActivity(`${PREFIX}help | ${client.guilds.cache.size} server | users ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}`, { type: "PLAYING" });
+  client.user.setActivity(`${PREFIX}help and ${PREFIX}play`, { type: "LISTENING" });
 
 
 });
